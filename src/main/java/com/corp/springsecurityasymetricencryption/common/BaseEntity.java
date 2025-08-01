@@ -1,4 +1,4 @@
-package common;
+package com.corp.springsecurityasymetricencryption.common;
 
 
 import jakarta.persistence.*;

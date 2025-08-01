@@ -1,4 +1,4 @@
-package user.exception;
+package com.corp.springsecurityasymetricencryption.user.exception;
 
 import lombok.Getter;
 

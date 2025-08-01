@@ -1,8 +1,9 @@
-package user;
+package com.corp.springsecurityasymetricencryption.user;
 
+import com.corp.springsecurityasymetricencryption.auth.request.RegistrationRequest;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
-import user.request.ProfileUpdateRequest;
+import com.corp.springsecurityasymetricencryption.user.request.ProfileUpdateRequest;
 
 @Service
 public class UserMapper {
@@ -23,8 +24,20 @@ public class UserMapper {
         {
             savedUser.setDateOfBirth(request.getDateOfBirth());
         }
+    }
 
-
-
+    public User toUser(final RegistrationRequest request){
+        return User.builder()
+                .firstName(request.getFirstName())
+                .lastName(request.getLastName())
+                .email(request.getEmail())
+                .phoneNumber((request.getPhoneNumber()))
+                .password(request.getPassword())
+                .enabled(true)
+                .locked(false)
+                .credentialsExpired(false)
+                .phoneVerified(false)
+                .emailVerified(false)
+                .build();
     }
 }

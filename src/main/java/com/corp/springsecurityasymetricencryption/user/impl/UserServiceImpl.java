@@ -1,19 +1,19 @@
-package user.impl;
+package com.corp.springsecurityasymetricencryption.user.impl;
 
+import com.corp.springsecurityasymetricencryption.user.User;
+import com.corp.springsecurityasymetricencryption.user.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import user.User;
-import user.UserMapper;
-import user.UserRepository;
-import user.UserService;
-import user.exception.BusinessException;
-import user.exception.ErrorCode;
-import user.request.ChangePasswordRequest;
-import user.request.ProfileUpdateRequest;
+import com.corp.springsecurityasymetricencryption.user.UserMapper;
+import com.corp.springsecurityasymetricencryption.user.UserRepository;
+import com.corp.springsecurityasymetricencryption.user.exception.BusinessException;
+import com.corp.springsecurityasymetricencryption.user.exception.ErrorCode;
+import com.corp.springsecurityasymetricencryption.user.request.ChangePasswordRequest;
+import com.corp.springsecurityasymetricencryption.user.request.ProfileUpdateRequest;
 
 @Service
 @RequiredArgsConstructor
@@ -83,7 +83,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteAccount(String userId) {
+    public void deleteAccount(final String userId) {
 
     }
 

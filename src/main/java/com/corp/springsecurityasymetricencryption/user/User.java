@@ -1,5 +1,6 @@
-package user;
+package com.corp.springsecurityasymetricencryption.user;
 
+import com.corp.springsecurityasymetricencryption.role.Role;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -9,7 +10,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.util.CollectionUtils;
-import role.Role;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

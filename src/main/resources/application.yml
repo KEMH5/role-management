@@ -18,4 +18,6 @@ spring:
 
 app:
   security:
-
+    jwt:
+      access-token-expiration: 86400000 # 24hours for local testing, Recommend 15 minutes for production
+      refresh-token-expiration: 604800000 # 7 days

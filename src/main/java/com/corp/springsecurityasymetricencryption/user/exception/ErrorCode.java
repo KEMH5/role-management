@@ -1,4 +1,4 @@
-package user.exception;
+package com.corp.springsecurityasymetricencryption.user.exception;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
@@ -13,7 +13,10 @@ public enum ErrorCode {
     CHANGE_PASSWORD_MISMATCH("CHANGE_PASSWORD_MISMATCH", "Current password and new password are not the same", BAD_REQUEST),
     INVALID_CURRENT_PASSWORD("INVALID_CURRENT_PASSWORD", "Current password is invalid", BAD_REQUEST),
     ACCOUNT_ALREADY_DEACTIVATED("ACCOUNT_ALREADY_DEACTIVATED", "Account already deactivated", BAD_REQUEST),
-    ACCOUNT_ALREADY_ACTIVATED("ACCOUNT_ALREADY_ACTIVATED", "Account already activated", BAD_REQUEST)
+    ACCOUNT_ALREADY_ACTIVATED("ACCOUNT_ALREADY_ACTIVATED", "Account already activated", BAD_REQUEST),
+    EMAIL_ALREADY_EXISTS("EMAIL_ALREADY_EXISTS", "Email already exited", BAD_REQUEST),
+    PHONE_NUMBER_ALREADY_EXISTS("PHONE_NUMBER_ALREADY_EXISTS", "Phone number already exists", BAD_REQUEST),
+    PASSWORD_MISMATCH("PASSWORD_MISMATCH", "Password don't match", BAD_REQUEST)
     ;
 
     private final String code;

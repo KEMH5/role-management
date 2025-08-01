@@ -1,8 +1,8 @@
-package user;
+package com.corp.springsecurityasymetricencryption.user;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
-import user.request.ChangePasswordRequest;
-import user.request.ProfileUpdateRequest;
+import com.corp.springsecurityasymetricencryption.user.request.ChangePasswordRequest;
+import com.corp.springsecurityasymetricencryption.user.request.ProfileUpdateRequest;
 
 public interface UserService extends UserDetailsService {
     void updateProfileInfo(ProfileUpdateRequest request, String userId);

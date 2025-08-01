@@ -1,4 +1,4 @@
-package user.request;
+package com.corp.springsecurityasymetricencryption.user.request;
 
 import lombok.*;
 

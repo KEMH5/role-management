@@ -1,12 +1,12 @@
-package role;
+package com.corp.springsecurityasymetricencryption.role;
 
-import common.BaseEntity;
+import com.corp.springsecurityasymetricencryption.common.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import user.User;
+import com.corp.springsecurityasymetricencryption.user.User;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package user;
+package com.corp.springsecurityasymetricencryption.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
