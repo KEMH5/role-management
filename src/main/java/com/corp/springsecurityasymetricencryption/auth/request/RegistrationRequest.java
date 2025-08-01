@@ -1,5 +1,6 @@
 package com.corp.springsecurityasymetricencryption.auth.request;
 
+import com.corp.springsecurityasymetricencryption.Validation.NonDisposableEmail;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -40,7 +41,7 @@ public class RegistrationRequest {
     @NotBlank(message = "VALIDATION.REGISTRATION.EMAIL.NOT_BLANK")
     @Email(message = "VALIDATION.REGISTRATION.EMAIL.FORMAT")
     @Schema(example = "ali@mail.com")
-    //@NonDisposableEmail(message = "VALIDATION.AUTHENTICATION.EMAIL.DISPOSABLE")
+    @NonDisposableEmail(message = "VALIDATION.AUTHENTICATION.EMAIL.DISPOSABLE")
     private String email;
 
     @NotBlank(message = "VALIDATION.REGISTRATION.PHONE.NOT_BLANK")
