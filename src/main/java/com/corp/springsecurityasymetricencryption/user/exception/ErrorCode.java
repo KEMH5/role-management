@@ -3,8 +3,7 @@ package com.corp.springsecurityasymetricencryption.user.exception;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
-import static org.springframework.http.HttpStatus.BAD_REQUEST;
-import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.http.HttpStatus.*;
 
 @Getter
 public enum ErrorCode {
@@ -16,7 +15,12 @@ public enum ErrorCode {
     ACCOUNT_ALREADY_ACTIVATED("ACCOUNT_ALREADY_ACTIVATED", "Account already activated", BAD_REQUEST),
     EMAIL_ALREADY_EXISTS("EMAIL_ALREADY_EXISTS", "Email already exited", BAD_REQUEST),
     PHONE_NUMBER_ALREADY_EXISTS("PHONE_NUMBER_ALREADY_EXISTS", "Phone number already exists", BAD_REQUEST),
-    PASSWORD_MISMATCH("PASSWORD_MISMATCH", "Password don't match", BAD_REQUEST)
+    PASSWORD_MISMATCH("PASSWORD_MISMATCH", "Password don't match", BAD_REQUEST),
+    ERROR_USER_DISABLED("ERROR_USER_DISABLED", "User is disabled", UNAUTHORIZED),
+    BAD_CREDENTIALS("BAD_CREDENTIALS", "Username and / password is incorect", UNAUTHORIZED),
+    USERNAME_NOT_FOUND("USERNAME_NOT_FOUND", "Username not found", UNAUTHORIZED),
+    INTERNAL_EXCEPTION("INTERNAL_EXCEPTION", "Internal server error", INTERNAL_SERVER_ERROR)
+
     ;
 
     private final String code;
